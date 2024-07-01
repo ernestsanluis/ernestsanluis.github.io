@@ -9,9 +9,11 @@ I am Ernest San Luis, a skilled IT professional proficient in HTML, CSS, JavaScr
 
 ### Skills
 
-- **Programming Languages**: HTML, CSS, JavaScript, C#, Python, SQL.
-- **Technologies**: Server Administration, Active Directory Management, Network Configuration.
-- **Additional**: Troubleshooting, Problem-Solving, Project Management.
+- **Programming Languages**: C#, Python, SQL
+- **Web Development**: HTML, CSS, JavaScript
+- **Technologies**: Server Administration, Active Directory Management, Network Configuration
+- **Additional Skills**: Troubleshooting, Problem-Solving, Project Management
+
 
 ### Experience
 
