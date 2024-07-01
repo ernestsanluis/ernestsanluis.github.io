@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: My website
+title: Ernest website
 
 # Your name to show in the footer
 author: Ernest San Luis
@@ -22,7 +22,7 @@ author: Ernest San Luis
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Project: "https://ernestsanluis.github.io/projects/"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://ernestsanluis.github.io/"
 
@@ -51,7 +51,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "sanluisernest@gmail.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  #rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: sanluisernest
   github: ernestsanluis
 #  twitter: 
@@ -64,7 +64,7 @@ social-network-links:
 #  xing: yourname
 #  stackoverflow: ""
 #  snapchat: 
-#  instagram: 
+  instagram: sanluisernest
 #  spotify: yourname
 #  telephone: +
 #  steam: 
@@ -100,7 +100,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "ernestsanluis.github.io"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
