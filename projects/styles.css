@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+header {
+    background-color: #000; /* Black background */
+    color: #ff0; /* Yellow text */
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+#anniversary-message {
+    font-size: 1.5em;
+    color: #ff0; /* Yellow text */
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#random-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#random-image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.1); /* Yellow shadow */
+    border: 2px solid #ff0; /* Yellow border */
+    animation: zoomIn 2s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+button {
+    background-color: #ff0; /* Yellow */
+    color: #000; /* Black */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000; /* Black */
+    color: #ff0; /* Yellow */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.gallery-item {
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.1); /* Yellow shadow */
+    border: 2px solid #ff0; /* Yellow border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 0, 0.3); /* Larger yellow shadow */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black with slight transparency */
+    transition: opacity 0.5s ease;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border: 2px solid #ff0; /* Yellow border */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ff0; /* Yellow color */
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: #ff0; /* Yellow text */
+    padding: 10px 20px;
+    height: 150px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (mobile phones) */
+@media (max-width: 600px) {
+    #random-image-container img {
+        max-width: 100%;
+    }
+    .gallery-item img {
+        max-width: 100%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #random-image-container img {
+        max-width: 80%;
+    }
+    .gallery-item img {
+        max-width: 150px;
+    }
+    .modal-content {
+        width: 70%;
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+    #random-image-container img {
+        max-width: 300px;
+    }
+    .gallery-item img {
+        max-width: 200px;
+    }
+    .modal-content {
+        width: 50%;
+    }
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #ff0; /* Yellow color */
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with slight transparency */
+}
