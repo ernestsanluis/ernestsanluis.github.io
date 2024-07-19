@@ -1,0 +1,382 @@
+/* Base styles for the body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("http://expertlinksmarketing.com/wp-content/uploads/2024/07/BG-1-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Container for the header content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 20px; */
+}
+
+/* Style for the top info section */
+.top-info {
+  display: flex;
+  color: white;
+  background-color: blue;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.top-info span {
+  margin-right: 20px;
+}
+
+/* Style for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: rgb(237, 237, 237);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: rgba(234, 203, 7, 1); /* Lighten background on hover */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0073ff;
+}
+
+/* Style for the video section */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.video-section video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-35%, -50%);
+  z-index: -1; /* Ensure video is behind overlay */
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1; /* Ensure overlay is above video */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space items evenly along the main axis */
+}
+
+.content-wrapper .text {
+  flex: 1; /* Take up remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+.content-wrapper .text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: rgb(252, 198, 0);
+}
+
+.content-wrapper .text p {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.content-wrapper .image {
+  flex: 1; /* Take up remaining space */
+  text-align: right; /* Align image to the right */
+}
+
+.content-wrapper .image img {
+  max-width: 300%; /* Ensure image scales appropriately */
+  height: auto;
+  border-radius: 10px;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 50px; /* Adjust image size */
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  color: white;
+}
+
+/* Style for the info section below the video */
+.info-section {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.info-section .container {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info-section p {
+  margin: 0 0 20px;
+}
+
+.info-section button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0073ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (Portrait and Landscape) */
+@media (max-width: 767px) {
+  .top-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-info span {
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    padding: 10px 0;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  .video-section {
+    height: 40vh; /* Adjust height for mobile */
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .content-wrapper .text {
+    text-align: center;
+  }
+
+  .content-wrapper .image {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .content-wrapper .image img {
+    max-width: 100%;
+  }
+}
+
+/* Tablets and Smaller Laptops */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .video-section {
+    height: 45vh; /* Adjust height for tablets */
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: translate(-60%, -50%);
+  }
+
+  .content-wrapper .text {
+    text-align: center;
+  }
+
+  .content-wrapper .image {
+    text-align: center;
+  }
+}
+
+/* Desktop and Larger Devices */
+@media (min-width: 1025px) {
+  .video-section {
+    height: 50vh; /* Maintain height for larger screens */
+  }
+
+  .content-wrapper {
+    transform: translate(-90%, -50%);
+  }
+
+  .content-wrapper .text {
+    text-align: left;
+  }
+
+  .content-wrapper .image {
+    text-align: right;
+  }
+}
+
+/* Style for the info section below the video */
+.info-section {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.info-section .container {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info-section p {
+  margin: 0 0 20px;
+}
+
+.info-section button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0073ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the services section */
+.services-section {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  color: black;
+  text-align: center;
+}
+
+.services-section h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  display: inline-block;
+  width: calc(50% - 30px); /* Adjust width based on the number of cards */
+  vertical-align: top;
+}
+
+.service-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  margin: 0 0 10px;
+}
+
+.service-card a.read-more {
+  text-decoration: none;
+  color: #0073ff;
+  font-weight: bold;
+}
+
+.service-card a.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (Portrait and Landscape) */
+@media (max-width: 767px) {
+  .service-card {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablets and Smaller Laptops */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .service-card {
+    width: calc(50% - 30px); /* Two cards per row */
+  }
+}
+
+/* Desktop and Larger Devices */
+@media (min-width: 1025px) {
+  .service-card {
+    width: calc(25% - 30px); /* Four cards per row */
+  }
+}
