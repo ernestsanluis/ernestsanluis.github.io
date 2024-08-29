@@ -3,45 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ernest San Luis' Bio Page</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .img-fluid {
-            width: 100%;
-            height: auto;
+        /* Additional CSS */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #008080;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #f0f0f0 !important;
+        }
+
+        .container h1, h2 {
+            color: #333;
+        }
+
+        .card-title {
+            color: #008080;
+        }
+
+        .btn-primary {
+            background-color: #008080;
+            border-color: #008080;
+        }
+
+        .btn-primary:hover {
+            background-color: #005757;
+            border-color: #005757;
+        }
+
+        footer {
+            background-color: #008080;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center mt-5">
+        <h1 class="mb-3">Welcome to My Portfolio</h1>
+        <p class="lead">Showcasing my projects and skills</p>
+    </div>
+
+    <section id="about" class="container mt-5">
+        <h2>About Me</h2>
+        <p>This is where you can write a brief description about yourself, your skills, and your background.</p>
+    </section>
+
+    <section id="projects" class="container mt-5">
+        <h2>Projects</h2>
         <div class="row">
-            <div id="bio" class="col-12 col-lg-6 text-center">
-                <h1>Ernest San Luis</h1>
-                <img src="photo.jpg" class="img-fluid" alt="Profile Picture" />
-            </div>
-            <div id="more" class="col-12 col-lg-6">
-                <h2>Favorite Music Artists</h2>
-                <ul>
-                    <li>Metallica</li>
-                    <li>Bob Marley</li>
-                    <li>Madonna</li>
-                    <li>The Beatles</li>
-                    <li>Pink Floyd</li>
-                </ul>
-                <h2>Favorite Films</h2>
-                <ol>
-                    <li>Pulp Fiction</li>
-                    <li>The Godfather</li>
-                    <li>The Lord of the Rings</li>
-                    <li>Iron Man</li>
-                    <li>Inception</li>
-                </ol>
-                <a href="https://www.meta.com/user/123" class="btn btn-primary">My Meta Profile</a>
+            <!-- Only one project card remains -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Description of Project 1.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact" class="container mt-5 mb-5">
+        <h2>Contact</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2024 Ernest San Luis | <a href="https://github.com/ernestsanluis" class="text-white">GitHub</a></p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
